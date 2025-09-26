@@ -191,11 +191,15 @@
   }
   .hero-buttons {
     flex-direction: column;
-    gap: 20px;
   }
   .hero-buttons button {
     width: 100%;
   }
+  .hero-right{
+    margin-top: -40px;
+   
+  }
+   
 }
 /* Default desktop styles */
 .macc-logo {
@@ -484,7 +488,6 @@
   .box1 img.about-image {
     width: 100%;
     height: auto;
-    border-radius: 300px 300px 300px 300px ;
   }
 }
 /*skills*/
