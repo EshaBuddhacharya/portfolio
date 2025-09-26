@@ -23,13 +23,13 @@ function Hero() {
             />
             <span className="file-name">Portfolio.jsx</span>
             {/* Big image acts as maximize button */}
-            {/* <img 
+            { <img 
               src="/images/big.png" 
               alt="React Logo" 
               className="macc-logo" 
               onClick={toggleMaximize} 
               
-            /> */}
+            /> }
           </div>
           <h1>&gt; Esha Buddhacharya</h1>
           <p className="highlight">&gt; Developer & Project Management Enthusiast</p>
