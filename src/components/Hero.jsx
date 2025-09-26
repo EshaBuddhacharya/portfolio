@@ -1,17 +1,36 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Hero.css'; 
 
 function Hero() {
+  const [isMaximized, setIsMaximized] = useState(false);
+
+  const toggleMaximize = () => {
+    setIsMaximized(!isMaximized);
+  };
+
   return (
-    <section className="hero-section">
+    <section className={`hero-section ${isMaximized ? 'maximized' : ''}`}>
       {/* Left Side - Content Box */}
-      <div className="hero-left">
+      <div className={`hero-left ${isMaximized ? 'maximized-left' : ''}`}>
         <div className="content-box">
-         <div className="hero-label">
-  <img style={{width:"40px",height:"35px"}} src="/images/logo.png" alt="React Logo" className="react-logo" />
-  <span className="file-name">Portfolio.jsx</span>
-  <img src="/images/Macc.png" alt="React Logo" className="macc-logo" />
-</div>
+          <div className="hero-label">
+            <img 
+              style={{width:"40px",height:"35px"}} 
+              src="/images/logo.png" 
+              alt="React Logo" 
+              className="react-logo" 
+            />
+            <span className="file-name">Portfolio.jsx</span>
+            {/* Big image acts as maximize button */}
+            <img 
+              src="/images/big.png" 
+              alt="React Logo" 
+              className="macc-logo" 
+              onClick={toggleMaximize} 
+              style={{cursor: 'pointer'}}
+            />
+          </div>
           <h1>&gt; Esha Buddhacharya</h1>
           <p className="highlight">&gt; Developer & Project Management Enthusiast</p>
           <p className="description">
@@ -29,14 +48,14 @@ function Hero() {
           </button>
           <button>
            <a href="/Eshacv.pdf" target="_blank" rel="noopener noreferrer" >
-      Resume
-      </a>
+             Resume
+           </a>
           </button>
         </div>
       </div>
 
       {/* Right Side - Sidebar */}
-      <div className="hero-right">
+      <div className={`hero-right ${isMaximized ? 'hidden' : ''}`}>
         <div className="files">
           <Link to="/about" className="file-link">📄 about.js</Link>
           <Link to="/projects" className="file-link">📄 projects.js</Link>
@@ -45,9 +64,8 @@ function Hero() {
           <img style={{width:"260px"}} src = "/images/Esha.png"/>
         </div>
         <div className="sidebar-footer">
-          <p>💌 <a href="mailto:esha@example.com">esha@example.com</a></p>
-          <p>🔗 <a href="https://linkedin.com/in/esha">LinkedIn</a></p>
-          <p>🐙 <a href="https://github.com/esha">GitHub</a></p>
+          <p>💌 <a href="mailto:eshabuddhacharya@gmail.com">eshabuddhacharya@gmail.com</a></p>
+          <p>🔗 <a href="https://www.linkedin.com/in/esha-buddhacharya-097580267/">LinkedIn</a></p>
         </div>
       </div>
     </section>

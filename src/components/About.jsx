@@ -16,7 +16,7 @@ function About() {
           </p>
 
           <p>
-            <span className="code-symbol">&gt;</span> Stepping out of your comfort zone is something I strongly believe in. Comparing ourselves to others only holds us back, so I focus on being better than I was yesterday. <span className="keyword">Self-belief</span> and <span className="keyword">continuous improvement</span> are the greatest measures of success, and they drive everything I do, both personally and professionally. I strive to combine my professional skills and growth mindset to make a meaningful impact in everything I pursue.
+            <span className="code-symbol">&gt;</span> Stepping out of our comfort zone is something I strongly believe in. Comparing ourselves to others only holds us back, so I focus on being better than I was yesterday. <span className="keyword">Self-belief</span> and <span className="keyword">continuous improvement</span> are the greatest measures of success, and they drive everything I do, both personally and professionally. I strive to combine my professional skills and growth mindset to make a meaningful impact in everything I pursue.
           </p>
 
           <p>

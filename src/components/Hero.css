@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0 90px;
+  padding: 0 95px;
   min-height: 100vh;
   box-sizing: border-box;
   background-color: #1e1e1e;
@@ -13,6 +13,30 @@
   gap: 20px;
   font-family: 'Courier New', monospace;
 
+}
+/* When hero-section is maximized, left content fills most of the screen */
+.hero-section.maximized {
+  flex-direction: column;
+}
+
+.hero-left.maximized-left {
+  width: 95%;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+
+.hero-right.hidden {
+  display: none; /* Hide the sidebar when maximized */
+}
+
+/* Optional: make content-box bigger smoothly */
+.content-box {
+  transition: all 0.3s ease;
+}
+
+.hero-left.maximized-left .content-box {
+  font-size: 1.2rem; /* Slightly bigger text */
+  padding: 30px; /* More padding for big view */
 }
 
 /* Left content */
@@ -93,7 +117,7 @@
   box-shadow: 0 8px 30px rgba(0,0,0,0.6);
   padding: 20px;
   max-width: 300px;
-  height: 80vh;
+  height: 75vh;
   display: flex;
   background-color: rgba(30, 30, 30, 0.95);
   flex-direction: column;
@@ -134,6 +158,11 @@
     max-width: 600px;
     
   }
+  .macc-logo {
+  width: 100px;
+  height: 30px;
+  margin-left: auto;
+
 }
 .hero-label {
   display: flex;
@@ -145,7 +174,7 @@
 @media (max-width: 480px) {
   .content-box {
     padding: 10px;
-    max-width: 100%;
+    max-width: 105%;
      
   }
   .content-box h1 {
@@ -167,15 +196,16 @@
 }
 /* Default desktop styles */
 .macc-logo {
-  width: 80px;
+  width: 100px;
   height: 25px;
-  margin-left: 288px;
+  margin-left: 280px;
 }
 
 .cross-logo {
   width: 80px;
   height: 30px;
   margin-left: 190px;
+}
 }
 
 /* Responsive overrides */
@@ -202,9 +232,9 @@
 
 @media (max-width: 480px) {
   .macc-logo {
-    width: 40px;
+    width: 70px;
     height: auto;
-    margin-left: 0; /* reset margins for mobile */
+    margin-left: auto; /* reset margins for mobile */
   }
   .cross-logo {
     width: 40px;
@@ -220,6 +250,8 @@
   .description.agile{
     font-size: 13px;
   }
+  
+
 }
 .contact-container
 {
@@ -781,6 +813,96 @@
 
 .pm-img {
   width: 100%;
+  border-radius: 12px;
+  border: 1px solid gray;
+}
+
+
+
+
+/* project.css*/
+.projects-section {
+  padding: 40px 20px;
+  background-color: #1e1e1e;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+}
+
+.projects-section h2 {
+  color: #61dafb;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #61dafb;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 cards per row */
+  gap: 20px;
+  justify-items: center;
+}
+
+.project-card {
+  background: rgba(30,30,30,0.95);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid gray;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 300px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+.project-card h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #ffdd55;
+}
+
+.project-card p {
+  color: #c5c6c7;
+  margin-bottom: 10px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid gray;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+}
+.project-img {
+  width: 100%;         /* fill the card width */
+  height: 180px;       /* fixed height for all cards */
+  object-fit: cover;   /* maintain aspect ratio, crop if necessary */
   border-radius: 12px;
   border: 1px solid gray;
 }
