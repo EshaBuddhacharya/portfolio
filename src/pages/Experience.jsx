@@ -40,10 +40,11 @@ function Experience() {
     }
   ];
 
-  const [touchedIndex, setTouchedIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  const handleTouch = (index) => {
-    setTouchedIndex(touchedIndex === index ? null : index);
+  // Toggle description on mobile
+  const handleCardClick = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
@@ -58,13 +59,15 @@ function Experience() {
             <div
               key={index}
               className="experience-card"
-              onTouchStart={() => handleTouch(index)}
+              onClick={() => handleCardClick(index)}
             >
               <h3 className="job-title">{exp.title}</h3>
               <p className="job-date">{exp.date}</p>
+
+              {/* Description toggled for mobile */}
               <ul
                 className={`description-list ${
-                  touchedIndex === index ? "show" : ""
+                  activeIndex === index ? "show" : ""
                 }`}
               >
                 {exp.description.map((item, i) => (

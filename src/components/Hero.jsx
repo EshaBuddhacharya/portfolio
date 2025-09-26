@@ -28,7 +28,7 @@ function Hero() {
               alt="React Logo" 
               className="macc-logo" 
               onClick={toggleMaximize} 
-              style={{cursor: 'pointer'}}
+              
             />
           </div>
           <h1>&gt; Esha Buddhacharya</h1>

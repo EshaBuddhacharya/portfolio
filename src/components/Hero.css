@@ -12,6 +12,7 @@
   flex-wrap: nowrap; /* Desktop default */
   gap: 20px;
   font-family: 'Courier New', monospace;
+  
 
 }
 /* When hero-section is maximized, left content fills most of the screen */
@@ -32,6 +33,7 @@
 /* Optional: make content-box bigger smoothly */
 .content-box {
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .hero-left.maximized-left .content-box {
@@ -171,6 +173,7 @@
   margin-bottom: 10px;
   margin-top: 0px;
 }
+}
 @media (max-width: 480px) {
   .content-box {
     padding: 10px;
@@ -196,9 +199,12 @@
 }
 /* Default desktop styles */
 .macc-logo {
-  width: 100px;
-  height: 25px;
-  margin-left: 280px;
+   position: absolute;
+  top: 15px;   /* distance from top */
+  right: 15px; /* distance from right */
+  width: 70px;
+  height: auto;
+  cursor: pointer;
 }
 
 .cross-logo {
@@ -206,21 +212,16 @@
   height: 30px;
   margin-left: 190px;
 }
-}
+
 
 /* Responsive overrides */
 @media (max-width: 1024px) {
+  
   .macc-logo {
-    margin-left: auto;  /* push to right */
-    width: 60px;
-    height: auto;
-  }
-  .cross-logo {
-    margin-left: auto;
     width: 50px;
-    height: auto;
-
+    margin-left: auto;
   }
+
   .cross-contact
 {
     margin-left: 430px;
