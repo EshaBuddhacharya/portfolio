@@ -484,6 +484,7 @@
   .box1 img.about-image {
     width: 100%;
     height: auto;
+    border-radius: 300px 300px 300px 300px ;
   }
 }
 /*skills*/

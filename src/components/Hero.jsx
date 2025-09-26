@@ -46,11 +46,11 @@ function Hero() {
           <button>
             <Link to="/Contact">Contact</Link>
           </button>
-          <button>
+          {/* <button>
            <a href="/Eshacv.pdf" target="_blank" rel="noopener noreferrer" >
              Resume
            </a>
-          </button>
+          </button> */}
         </div>
       </div>
 
